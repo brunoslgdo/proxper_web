@@ -1,0 +1,23 @@
+mixin section_heading(textTitle, textSubtitle)
+    hgroup.section-heading
+        h2.section-heading__title= textTitle
+        h3.section-heading__subtitle= textSubtitle
+
+mixin section_heading_center(textTitle, textSubtitle)
+    hgroup.section-heading.text--center
+        h2.section-heading__title= textTitle
+        h3.section-heading__subtitle= textSubtitle
+
+mixin section_heading_alt(textTitle, textSubtitle)
+    hgroup.section-heading
+        h2.section-heading__title.section-heading--text-alt= textTitle
+        h3.section-heading__subtitle.section-heading--text-alt= textSubtitle
+
+mixin section_display(textDisplay)
+    h2.text= textDisplay
+
+mixin section_title(textTitle)
+    h2.subhead__title= textTitle
+
+mixin section_subtitle(textSubtitle)
+    h2.section-subtitle= textSubtitle

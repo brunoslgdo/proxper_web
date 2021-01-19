@@ -1,0 +1,16 @@
+.what-is-it {
+    margin-bottom: toRem(24px);
+
+    &__wrap {
+        display: grid;
+        gap: var(--su-16);
+    }
+}
+
+.how-does-it-works {
+    
+    &__wrap {
+        display: grid;
+        gap: var(--su-16);
+    }
+}

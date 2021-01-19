@@ -1,0 +1,20 @@
+extend ../templates/main
+block main
+    +jumbotron_pages(
+        'contact',
+        'Deja lo más importante en manos de los profesionales'
+    )
+    section.container.container--p88.contact-form
+        .subcontainer--w880.contact-form__wrap
+            .contat-form__child
+                h2.head__title.weight--light.line-height--130.first Ingresa tus datos y nos pondremos en contacto contigo para darte atención personalizada.
+            .contat-form__child
+                form(action="", class="form")
+                    label(for="name", class="form__label") Nombre (requerido)
+                        input(type="text", placeholder="Ximena Mendoza Patiño", class="form__input")
+                    label(for="name", class="form__label") Fecha de nacimiento
+                        input(type="text", placeholder="dd/mm/aaaa", class="form__input")
+                    label(for="name", class="form__label") Teléfono (requerido)
+                        input(type="tel", placeholder="5569046638", class="form__input")
+                    label(for="name", class="form__label") E-mail (requerido)
+                        input(type="text", placeholder="clientes@proxper.com.mx", class="form__input")

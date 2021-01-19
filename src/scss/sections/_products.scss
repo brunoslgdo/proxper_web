@@ -1,0 +1,18 @@
+.contact__whatsapp {
+    position: fixed;
+    right: var(--su-32);
+    bottom: var(--su-32);
+    z-index: 1000;
+    filter: drop-shadow(0 0 toRem(4px) rgba(0, 0, 0, .6));
+    transition: transform .1s ease-in;
+
+    &:hover {
+        transform: scale(1.01);
+        transition: transform .3s ease-in;
+    }
+}
+
+.products {
+    padding-top: var(--su-88);
+    padding-bottom: var(--su-88);
+}

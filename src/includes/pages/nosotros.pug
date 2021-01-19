@@ -1,0 +1,30 @@
+extend ../templates/main
+block main
+    
+    +jumbotron_pages(
+        'our-team',
+        'Conoce a nuestro equipo'
+    )
+    
+    <!-- meet our team -->
+    section.container.container--p128
+        .subcontainer.subcontainer--w880
+            +section_heading(
+                'Nosotros',
+                'Expertos en Seguridad Financiera'
+            )
+            +section_content(
+                'Somos un equipo de asesores expertos en seguridad financiera, protección e incremento del patrimonio. Contamos con un modelo de detección de necesidades enfocado a las metas de cada cliente, por lo que nuestras soluciones permanecen hasta hacer realidad los objetivos de cada asegurado.',
+                false,
+                false
+            )
+        .subcontainer.subcontainer--w880.out-team
+            .our-team__child
+                +section_subtitle('Directivos')
+                +cards(CARDS_DIRECTOR_TEAM)
+            .our-team__child
+                +section_subtitle('Gerentes')
+                +cards(CARDS_MANAGEMENT_TEAM)
+            .our-team__child
+                +section_subtitle('Equipo de asesores')
+                +cards(CARDS_CONSULTANT_TEAM.sort((topConsultant, bottomConsultant) => topConsultant.rank - bottomConsultant.rank))

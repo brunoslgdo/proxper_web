@@ -1,0 +1,44 @@
+extend ../templates/main
+block main
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v8.0" nonce="1eoZrf44"></script>
+    
+    +jumbotron_home(
+        'hero-image-header.jpg',
+        'Seguridad Financiera',
+        'Confianza'
+    )
+    
+    <!-- products -->
+    section.container.container--p128#productos
+        .subcontainer.subcontainer--w880
+            +section_heading_center(
+                'Nuestros productos',
+                'Entendiendo tus necesidades'
+            )
+        .subcontainer.subcontainer--w880
+            +cards(CARDS_PRODUCT)
+    
+    <!-- who we are -->
+    section.container.container--p128.who-we-are
+        .subcontainer.subcontainer--w880.who-we-are__wrap
+            article.who-we-are__child
+                +section_heading_alt(
+                    '¿Quienes somos?',
+                    'Expertos en Seguridad Financiera'
+                )
+                +section_content(
+                    'Proxper Asesores S.C., es una promotoria que cuenta con una amplia experiencia en el mercado financiero. Contamos con un equipo de asesores altamente capacitados, los cuales logran ofrecer productos a la medida de cada cliente, mismos que son sensibilizados por la empatía hacia los intereses de cada asegurado. Consideramos que la protección financiera y el seguro de vida son base fundamental para el bienestar de la familia, teniendo como objetivo final llevar tranquilidad a los hogares de las familias mexicanas.',
+                    false,
+                    true
+                )
+                include ../components/values
+            article.who-we-are__child
+                <div class="fb-page" data-href="https://www.facebook.com/ProxperAsesores" data-tabs="timeline" data-width="408" data-height="auto" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ProxperAsesores" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ProxperAsesores">Proxper</a></blockquote></div>
+
+    section.bg--second-dark     
+        +jumbotron_footer(
+            'hero-image-footer.jpg',
+            'Expertos en Seguridad Financiera'
+        )

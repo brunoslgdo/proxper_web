@@ -1,0 +1,35 @@
+.over-the-fold {
+    background-color: var(--second-dark);
+    padding: var(--su-80) var(--su-32);
+    margin-bottom: var(--su-80);
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--su-40)
+    }
+
+    &__child:nth-child(2) {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__title {
+        @extend .head__title;
+        @extend .weight--bold;
+        @extend .line-height--130;
+        color: var(--text-alt);
+        margin-bottom: var(--su-24);
+    }
+    
+    &__description {
+        @extend .subhead__subtitle;
+        @extend .weight--light;
+        @extend .line-height--175;
+        color: var(--text-alt);
+    }
+
+    &__icon {
+        margin-right: var(--su-32);
+    }
+}

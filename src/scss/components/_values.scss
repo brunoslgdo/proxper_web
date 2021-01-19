@@ -1,0 +1,26 @@
+.values {
+    border: toRem(2px) solid var(--first);
+    border-radius: var(--su-8);
+    padding: var(--su-32);
+    margin-top: toRem(48px);
+    margin-bottom: var(--su-24);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__legend {
+        @extend .head__title;
+        @extend .weight--sbold;
+        color: var(--text-alt);
+        margin-left: toRem(-16px);
+        padding-left: toRem(12px);
+        padding-right: toRem(12px);
+    }
+
+    &__description {
+        @extend .text__body;
+        @extend .weight--light;
+        color: var(--text-alt);
+    }
+}

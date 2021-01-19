@@ -1,0 +1,16 @@
+.nav-arrows {
+    margin-bottom: toRem(24px);
+    text-align: right;
+    
+    &__controls {
+        display: inline-flex;
+    }
+
+    &__prev {
+        margin-right: var(--md);
+    }
+
+    &__next {
+        transform: rotate(180deg);
+    }
+}

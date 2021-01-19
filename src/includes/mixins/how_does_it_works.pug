@@ -1,0 +1,9 @@
+mixin how_does_it_works(productTitle, productDescription, productImg)
+    .how-does-it-works
+        .how-does-it-works__wrap
+            .how-does-it-works__child
+                h3.subhead__display.text= productTitle
+            .how-does-it-works__child
+                p.body.regular.text-light !{`${productDescription}`}
+            .how-does-it-works__child
+                img(src=`${pathImg}${productImg}`, alt="")

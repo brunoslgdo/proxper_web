@@ -1,0 +1,28 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products_video(
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/SG9ZhlGDd0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    )
+block content
+    +section_heading_center(
+        'Orvi 99',
+        'Tome decisiones hoy para maximizar sus ingresos en el futuro.'
+    )
+    +jumbotron_img_product(
+        'orvi-99-thumbnail-02.jpg'
+    )
+    +what_is_it(
+        '¿Qué es Orvi 99?',
+        'Es un seguro de vida de protección vitalicia que te brinda cobertura por fallecimiento a partir de la contratación y durante toda tu vida, sabiendo que, pase lo que pase, tu familia mantendrá su patrimonio.',
+        'vida-mujer-thumbnail-02.png'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        ''
+    )
+    .bullets
+        ul.card-product
+            each item in CARDS_HDIW.orvi99
+                li.card-product__item
+                    p.h5.light.text-alt= `${item.bullet}`
+                    img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

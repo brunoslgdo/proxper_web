@@ -1,0 +1,28 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products_video(
+        '<iframe src="https://www.youtube.com/embed/eeCKJzN-4eM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    )
+block content
+    +section_heading_center(
+        'Seguro de Gastos Médicos Mayores',
+        'Protege tu salud y la de tus seres queridos'
+    )
+    +jumbotron_img_product(
+        'sgmm-thumbnail-02.jpg'
+    )
+    +what_is_it(
+        '¿Qué es un seguro de Gastos Médicos Mayores?',
+        'Es un instrumento que permite protegerte a ti y tus seres queridos ante el impacto económico que puede representar un gasto en Salud. La protección de un Seguro les ayudará a solventar los costos de atención médica, para que ustedes solo se concentren en estar bien.',
+        'realiza-thumbnail-01.png'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        'Contratarás el producto que mejor se ajuste a tu estilo y etapa de vida, de tal manera que decidas tu participación por evento, el nivel hospitalario al que te gustaría tener acceso y si lo deseas, beneficios adicionales que pueden mejorar tu cobertura. En caso de requerir atención por algún Accidente o Enfermedad, se cubrirán los gastos médicos derivados de la atención, como son: hospitalización, honorarios médicos, medicamentos, estudios de laboratorio, etc.'
+    )
+    //- .bullets
+    //-     ul.card-product
+    //-         each item in CARDS_HDIW.sgmm
+    //-             li.card-product__item
+    //-                 p.h5.light.text-alt= `${item.bullet}`
+    //-                 img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

@@ -1,0 +1,15 @@
+.button {
+    display: inline-block;
+    background-color: var(--second);
+    border: toRem(2px) solid var(--second);
+    border-radius: var(--su-32);
+    color: var(--text-alt);
+    font-size: var(--small);
+    font-weight: var(--bold);
+    line-height: 100%;
+    padding: toRem(12px) var(--su-32);
+
+    &--ghost {
+        background-color: initial;
+    }
+}

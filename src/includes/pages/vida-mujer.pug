@@ -1,0 +1,27 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products_video(
+        '<iframe src="https://www.youtube.com/embed/64E09-NEZgA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    )
+block content
+    +section_heading_center(
+        'Vida Mujer',
+        'Mujer previsora vale por dos'
+    )
+    +jumbotron_img_product(
+        'vida-mujer-thumbnail-02.jpg'
+    )
+    +what_is_it(
+        '¿Qué es Vida Mujer?',
+        'Nos dimos a la tarea de entenderte y crear un seguro de vida que te permita gozar de cada uno de esos roles, dándote ese equilibrio que buscas en cada decisión que tomas en pro de ti y tus seres queridos. Vida Mujer protege tu patrimonio y te brinda un atractivo esquema de ahorro con el que podrás materializar aquellas metas que te propongas; además contarás con un apoyo en caso de presentarse alguna enfermedad propia de la mujer y tus beneficiarios contarán con un respaldo económico en caso de fallecimiento.'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        ''
+    )
+    .bullets
+        ul.card-product
+            each item in CARDS_HDIW.vidamujer
+                li.card-product__item
+                    p.h5.light.text-alt= `${item.bullet}`
+                    img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

@@ -1,0 +1,117 @@
+.footer {
+    background-color: var(--first);
+    padding: var(--su-80) var(--su-32);
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 'logo'
+                             'socials'
+                             'advertisements'
+                             'address'
+                             'disclaimer'
+                             'contact';
+        gap: var(--su-32);
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: toRem(1200px);
+
+        @media only screen and (min-width: 667px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: 'logo socials'
+                                 'advertisements address'
+                                 'disclaimer contact';
+            text-align: initial;
+        }
+    }
+
+    &__child:nth-child(1) { 
+        grid-area: logo; 
+    }
+
+    &__child:nth-child(2) { 
+        grid-area: socials; 
+    }
+
+    &__child:nth-child(3) {
+        grid-area: advertisements;
+
+        * { 
+            color: var(--second);
+        }
+    }
+
+    &__child:nth-child(4) { 
+        grid-area: disclaimer; 
+    }
+
+    &__child:nth-child(5) { 
+        grid-area: address; 
+
+        * { 
+            color: var(--second);
+        }
+    }
+
+    &__child:nth-child(6) { 
+        grid-area: contact;
+
+        * { 
+            color: var(--second);
+        }
+    }
+
+    @media only screen and (min-width: 667px) {
+
+        &__child:nth-child(5), 
+        &__child:nth-child(6) { 
+            text-align: right;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: toRem(256px);
+
+    @media only screen and (min-width: 667px) {
+        margin-right: 0;
+    }
+}
+
+.advertisements {
+    
+    &__link {
+        @extend .text__small;
+        @extend .weight--sbold;
+        color: var(--second);
+    }
+}
+
+.disclaimer {
+    @extend .text__small;
+    @extend .weight--light;
+    color: var(--text-alt);
+}
+
+.address {
+    @extend .text__small;
+    @extend .weight--regular;
+    @extend .line-height--130;
+    color: var(--text-alt);
+}
+
+.contact {
+    
+    &__link {
+        @extend .text__small;
+        @extend .weight--regular;
+        color: var(--text-alt);
+    }
+}

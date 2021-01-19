@@ -1,0 +1,27 @@
+.section-heading {
+    margin-bottom: var(--su-24);
+    
+    &__title {
+        @extend .subhead__subtitle;
+        @extend .weight--regular;
+        @extend .line-height--130;
+        color: var(--first-light);
+    }
+    
+    &__subtitle {
+        @extend .head__title;
+        @extend .weight--sbold;
+        @extend .line-height--130;
+        color: var(--text-dark);
+    }
+
+    &--text-alt {
+        color: var(--text-alt);
+    }
+}
+
+.section-subtitle {
+    @extend .subhead__display;
+    color: var(--text);
+    margin-bottom: var(--su-24);
+}

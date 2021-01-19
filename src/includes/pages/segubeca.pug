@@ -1,0 +1,27 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products_video(
+        '<iframe src="https://www.youtube.com/embed/QvNkSRAImkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    )
+block content
+    +section_heading_center(
+        'SeguBeca',
+        'Asegura su futuro.'
+    )
+    +jumbotron_img_product(
+        'segubeca-thumbnail-02.jpg'
+    )
+    +what_is_it(
+        '¿Qué es SeguBeca?',
+        'Educar a nuestros hijos es el deber más gratificante y satisfactorio del mundo, pero también genera la responsabilidad para la cual no siempre estamos totalmente preparados. SeguBeca permite a los padres y/o tutores llevar a cabo una adecuada planeación para la educación universitaria de los hijos, y a ellos los apoya para que puedan contar con la educación universitaria que necesitan.'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        ''
+    )
+    .bullets
+        ul.card-product
+            each item in CARDS_HDIW.segubeca
+                li.card-product__item
+                    p.h5.light.text-alt= `${item.bullet}`
+                    img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

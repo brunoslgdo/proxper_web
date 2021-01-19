@@ -1,0 +1,23 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products(
+        'realiza-thumbnail-01.jpg',
+        'Realiza',
+        'Cuando hablas de tus metas, deseas que todo salga de acuerdo con el plan. Nadie quiere que un imprevisto u obstáculo lo retrase; sin embargo, la vida está llena de eventos inesperados que no podemos controlar. Por eso, debemos estar preparados con Realiza.'
+    )
+block content
+    +what_is_it(
+        '¿Qué es Realiza?',
+        'Es un Seguro de Vida que combina la protección con que requieres opciones de ahorro, que podrás conformar a partir de las aportaciones adicionales que realices, obteniendo rendimientos según el comportamiento del mercado y el riesgo que hayas elegido para el cumplimiento de metas y proyectos a largo plazo.',
+        'realiza-thumbnail-02.jpg'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        'Es un seguro de vida que combina la protección que requieres con atractivas opciones de rendimiento, para que de acuerdo con tu perfil, plazo y objetivos, logres el ahorro necesario para cumplir tus metas y proyectos. Conserva tu seguro en etapas de crisis para incrementar tu capital en épocas fructíferas, gracias a la posibilidad de pagar tus primas con anticipación y por el monto adicional que más te convenga.'
+    )
+    .bullets
+        ul.card-product
+            each item in CARDS_HDIW.realiza
+                li.card-product__item
+                    p.h5.light.text-alt= `${item.bullet}`
+                    img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

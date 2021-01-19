@@ -1,0 +1,29 @@
+.who-we-are {
+    background-color: var(--second-dark);
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: repeat(2, auto);
+        gap: var(--su-32);
+        
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1;
+        }
+    }
+
+    &__child:nth-child(1) {
+
+        @media only screen and (min-width: 768px) {
+            grid-column: 1 / span 7;
+        }
+    }
+    
+    &__child:nth-child(2) {
+
+        @media only screen and (min-width: 768px) {
+            grid-column: 8 / span 5;
+        }
+    }
+}

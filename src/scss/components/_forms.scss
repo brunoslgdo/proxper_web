@@ -1,0 +1,40 @@
+.form {
+
+    &__label,
+    &__input {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__label {
+        font-size: var(--small);
+        margin-bottom: var(--su-32);
+    }
+    
+    &__input {
+        font-size: var(--body);
+        border: toRem(1px) solid transparent;
+        border-bottom-color: var(--first);
+        margin-top: var(--su-24);
+        padding-bottom: var(--su-8);
+        padding-left: var(--su-24);
+        width: 100%;
+    }
+}
+
+.contact-form {
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1;
+        gap: var(--su-32);
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }   
+    }
+
+    &__child {
+
+    }
+}

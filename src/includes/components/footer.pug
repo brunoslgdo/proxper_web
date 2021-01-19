@@ -1,0 +1,32 @@
+include ../config/conf_socials
+include ../config/conf_advertisements
+include ../config/conf_contact
+footer.footer
+    section.footer__wrap
+        //- logo
+        .footer__child
+            img(src=`${pathImg}proxper-logo.svg`, alt="proxper - logo")
+        //- socials
+        nav.footer__child
+            ul.socials
+                each social in SOCIALS
+                    li.socials__item: a(href=`${social.url}`, class="socials__link"): img(src=`${pathImg}${social.icon}`, alt=`proxper - ${social.icon}`)
+        //- adversiments
+        nav.footer__child
+            ul.advertisements
+                each advertisement in ADVERTISEMENTS
+                    li.advertisements__item: a(href=`${advertisement.url}`, rel="noopener", class="advertisements__link") !{`${advertisement.content}`}
+        //- disclaimer
+        .footer__child
+            p.disclaimer Nos respalda una aseguradora con la mayor experiencia y solidez financiera en México: Seguros Monterrey New York Life, líder con más de 80 años en el ramo.
+        //- address
+        address.footer__child  
+            a(href=`${CONTACT.address.url}`, target="_blank", rel="noopener", class="address") !{`${CONTACT.address.content}`}
+        //- contact
+        .footer__child
+            ul.contact
+                li.contact__item: a(href=`mailto:${CONTACT.email}`, class="contact__link") !{`${CONTACT.email}`}   
+                li.contact__item: a(href=`tel:+52${CONTACT.tel.one}`, class="contact__link") !{`${CONTACT.tel.one}`}
+                li.contact__item
+                    a(href=`tel:+52${CONTACT.tel.two}`, class="contact__link") !{`${CONTACT.tel.two}`} 
+                    //- span.address ext. !{`${CONTACT.tel.twoExt}`}

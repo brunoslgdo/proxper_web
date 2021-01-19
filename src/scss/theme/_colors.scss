@@ -1,0 +1,30 @@
+$colors: (
+    first: #5C2580,
+    first-dark: #2D0053,
+    first-light: #8C52B0,
+    second: #00ABE0,
+    second-dark: #007CAE,
+    second-light: #63DDFF,
+    text: #56495F,
+    text-dark: #2D2135,
+    text-light: #83758C,
+    text-alt: #FFFFFF
+);
+
+:root {
+
+    @each $key, $val in $colors {
+        --#{$key}: #{$val};
+    }
+}
+
+@each $key, $val in $colors {
+    
+    .#{$key} {
+        color: #{$val};
+    }
+    
+    .bg--#{$key} {
+        background-color: #{$val};
+    }
+}

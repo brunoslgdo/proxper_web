@@ -1,0 +1,20 @@
+include ../config/conf_navbar
+header.header
+    .header__wrap.logo
+        a(href="index.html"): img(src=`${pathImg}proxper-logo.svg`, class="header__logo", alt="proxper")
+    .header__wrap.navbar
+        #icon-menu.icon-menu
+            .icon-menu__line.top
+            .icon-menu__line.middle
+            .icon-menu__line.bottom
+        a(href="https://api.whatsapp.com/send?phone=+5215563499558&text=¡Hola!%20Me%20interesa%20recibir%20más%20información%20de%20sus%20productos", target="_blank", rel="noopener"): img(src=`${pathImg}whatsapp.svg`, class="header__whatsapp")
+    #nav.header__wrap.nav
+        ul.menu.menu__left
+            each item in NAVBAR_LEFT
+                li.menu__item: a(href=`${item.url}`, class="menu__link") !{`${item.content.toUpperCase()}`}
+        ul.menu.menu__right
+            each item, key in NAVBAR_RIGHT
+                if key / 2 === 0
+                    li.menu__item: a(href=`${item.url}`, class="button button--ghost") !{`${item.content}`}
+                else
+                    li.menu__item: a(href=`${item.url}`, class="button") !{`${item.content}`}

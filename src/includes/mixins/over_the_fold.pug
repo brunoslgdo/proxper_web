@@ -1,0 +1,8 @@
+mixin over_the_fold(imgThumbnail, textTitle, textDescription)
+    .container.container--p88.over-the-fold
+        .subcontainer.subcontainer--w880.over-the-fold__wrap
+            .over-the-fold__child
+                img(src=`${pathImg}${imgThumbnail}`, alt="")
+            .over-the-fold__child
+                h2.over-the-fold__title= textTitle
+                p.over-the-fold__description= textDescription

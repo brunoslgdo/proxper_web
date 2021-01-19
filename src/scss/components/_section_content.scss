@@ -1,0 +1,14 @@
+.section-content {
+    color: var(--text-light);
+    font-size: var(--body);
+    font-weight: (--light);
+    margin-bottom: var(--su-32);
+    
+    &--alt {
+        color: var(--text-alt);
+    }
+
+    &--center {
+        text-align: center;
+    }
+}

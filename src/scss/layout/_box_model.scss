@@ -1,0 +1,21 @@
+.container {
+    max-width: 100vw;
+    padding-right: var(--su-16);
+    padding-left: var(--su-16);
+
+    &--p128 {
+        padding-top: toRem(128px);
+        padding-bottom: toRem(128px);
+    }
+
+    &--p88 {
+        padding-top: toRem(88px);
+        padding-bottom: toRem(88px);
+    }
+}
+
+    .subcontainer--w880 {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: toRem(880px);
+    }

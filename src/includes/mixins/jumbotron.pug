@@ -1,0 +1,51 @@
+mixin jumbotron_home(imgHero, textTitle, textCaption)
+    section.jumbotron.jumbotron--h560.jumbotron--bg-home.polygon--shape-v
+        .jumbotron__heading.jumbotron--text-center
+            h2.jumbotron__title= textTitle
+            h3.jumbotron__caption= textCaption
+
+mixin jumbotron_pages(imgHero, textTitle)
+    - let img = imgHero 
+    if img == 'our-team'
+        section.jumbotron.jumbotron--h440.jumbotron--bg-our-team.polygon--shape-v
+            .jumbotron__heading.jumbotron--text-center
+                h2.jumbotron__title= textTitle
+    if img == 'join-us'
+        section.jumbotron.jumbotron--h440.jumbotron--bg-join-us.polygon--shape-v
+            .jumbotron__heading.jumbotron--text-center
+                h2.jumbotron__title= textTitle
+    if img == 'contact'
+        section.jumbotron.jumbotron--h440.jumbotron--bg-contact.polygon--shape-v
+            .jumbotron__heading.jumbotron--text-center
+                h2.jumbotron__title= textTitle
+
+mixin jumbotron_products(imgProduct, textTitle, textDescription)
+    section.jumbotron.bg--second-dark
+        .jumbotron__grid
+            .jumbotron__product-image
+                img(src=`${pathImg}${imgProduct}`, class="jumbotron__image", alt=`${textTitle}`)
+            .jumbotron__content
+                h2.jumbotron__title= textTitle
+                p.jumbotron__description= textDescription
+
+//- 
+    videos disponibles en canal de youtube
+    - seguro de gastos medicos mayores 
+    - segubeca
+    - vida mujer
+    - imagina ser
+    - orvi 99
+
+mixin jumbotron_products_video(urlVideo)
+    section.jumbotron-video.bg--second-dark !{`${urlVideo}`}
+
+mixin jumbotron_img_product(imgThumbail)
+    section.jumbotron.jumbotron--mb.jumbotron--h440.polygon--diagonal-bottom
+        img(src=`${pathImg}${imgThumbail}`, class="jumbotron__hero-image", alt=`${textTitle}`)
+
+mixin jumbotron_footer(imgHero, textTitle)
+    section.jumbotron.jumbotron--h440.polygon--diagonal-top
+        img(src=`${pathImg}${imgHero}`, class="jumbotron__hero-image", alt=`${textTitle}`)
+        .jumbotron__heading.jumbotron--text-center
+            h2.jumbotron__title= textTitle
+            h3.jumbotron__caption= textCaption

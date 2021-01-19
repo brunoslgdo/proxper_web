@@ -1,0 +1,23 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products(
+        'star-dotal-thumbnail-01.jpg',
+        'Star Dotal',
+        'Sabemos que te esfuerzas por trazar el mejor camino. Te acompañamos e impulsamos para cumplir tus metas. ¡Ten siempre la certeza de que somos tu respaldo!'
+    )
+block content
+    +what_is_it(
+        '¿Qué es Star Dotal?',
+        'Es un seguro de vida que además te genera un ahorro; cuando tu plan llega a su vencimiento recibes el dinero para realizar tus metas y sueños y en caso de que llegaras a faltar, tus seres queridos recibirán la suma asegurada que contrataste.',
+        'star-temporal-thumbnail-02.png'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        'Éste seguro es ideal para las personas que tienen el hábito de ahorrar y que se preocupan por su familia.'
+    )
+    .bullets
+        ul.card-product
+            each item in CARDS_HDIW.stardotal
+                li.card-product__item
+                    p.h5.light.text-alt= `${item.bullet}`
+                    img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

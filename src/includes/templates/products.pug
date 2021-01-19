@@ -1,0 +1,40 @@
+include ../config/conf_variables
+include ../config/conf_cards
+include ../mixins/section_heading
+include ../mixins/what_is_it
+include ../mixins/how_does_it_works
+include ../mixins/jumbotron
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Proxper | Seguridad financiera
+        //- favicon
+        link(rel="icon", href="favicon.svg", sizes="any", type="image/svg+xml")
+        //- google fonts
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap", rel="stylesheet") 
+        //- styles
+        link(rel="stylesheet", href=`${pathCss}styles.css`)
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        script(async src="https://www.googletagmanager.com/gtag/js?id=G-81Y5NX19J2")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-81Y5NX19J2');
+    body
+        
+        include ../components/header
+            
+        block jumbotron
+        
+        .container.products
+            .subcontainer.subcontainer--w880
+                block content
+
+        include ../components/footer
+
+        //- scripts
+        script(src=`${pathJs}menu.js`)

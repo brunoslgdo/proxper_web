@@ -1,0 +1,27 @@
+extend ../templates/products
+block jumbotron
+    +jumbotron_products_video(
+        '<iframe src="https://www.youtube.com/embed/MOfKcOriAAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    )
+block content
+    +section_heading_center(
+        'Imagina Ser',
+        'Ahorra para el retiro que imaginas'
+    )
+    +jumbotron_img_product(
+        'imagina-ser-thumbnail-02.jpg'
+    )
+    +what_is_it(
+        '¿Qué es Imagina Ser?',
+        'Si llegaste hasta aquí seguramente estás buscando garantizar tus ingresos en el retiro para mantener tu estilo de vida, no depender de tus familiares o concretar un sueño en la etapa de vida en la que tendrás más tiempo para disfrutarlo. Con este Seguro de Vida te ayudamos a cumplir tus objetivos protegiendo la estabilidad económica de tu familia durante el periodo de acumulación, garantizando rendimiento mínimo y lo más importante, tu ahorro no perderá su valor adquisitivo.'
+    )
+    +how_does_it_works(
+        '¿Cómo funciona?',
+        ''
+    )
+    .bullets
+        ul.card-product
+            each item in CARDS_HDIW.vidamujer
+                li.card-product__item
+                    p.h5.light.text-alt= `${item.bullet}`
+                    img(src=`${pathImg}${item.icon}`, class="card-product__icon", alt="")

@@ -1,0 +1,187 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--first);
+    padding: var(--su-16) var(--su-32);
+    position: fixed;
+    bottom: 0;
+    min-width: 100vw;
+    z-index: 100;
+    
+    @media only screen and (min-width: 1024px) {
+        top: 0;
+        bottom: initial;
+    }
+
+    &__wrap.navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__wrap.nav {
+        border-top-left-radius: var(--su-8);
+        border-top-right-radius: var(--su-8);
+        position: fixed;
+        left: 0;
+        bottom: var(--su-64);
+        padding-top: var(--su-32);
+        padding-bottom: var(--su-16);
+        background-color: inherit;
+        min-width: inherit;
+
+        @media only screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            min-width: initial;
+        }
+    }
+
+    &__logo,
+    &__whatsapp {
+        height: var(--su-32);
+    }
+
+    &__logo {
+
+        @media only screen and (min-width: 1024px) {
+            height: var(--su-36);
+        }
+    }
+    
+    &__whatsapp {
+        margin-left: var(--su-24);
+        
+        @media only screen and (min-width: 1024px) {
+            filter: drop-shadow(0 0 toRem(2px) rgba(0, 0, 0, .8));
+            position: fixed;
+            bottom: var(--su-32);
+            right: var(--su-32);
+            height: initial;
+            z-index: 1000;
+        }
+    }
+}
+
+.menu {
+    text-align: center;
+
+    @media only screen and (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__left {
+
+        @media only screen and (min-width: 1024px) {
+            
+            &:first-child {
+                margin-right: var(--su-40);
+                margin-left: var(--su-64);
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: var(--su-16);
+        
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 0;
+            
+            &:first-child {
+                margin-right: var(--su-40);
+            }
+        }
+    }
+
+    &__link {
+        @extend .text__small;
+        @extend .weight--bold;
+        color: var(--text-alt);
+    }
+}
+
+.icon-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: toRem(18px);
+    width: var(--su-24);
+
+    @media only screen and (min-width: 1024px) {
+        display: none;
+    }
+
+    &__line {
+        background-color: var(--text-alt);
+        border-radius: var(--su-32);
+        width: var(--su-24);
+        height: toRem(4px);
+    }
+
+    &__line.top,
+    &__line.bottom {
+        width: var(--su-12);
+    }
+
+    &__line.top {
+        align-self: flex-end;
+    }
+}
+
+.icon-close {
+    transition: transform 0.1s ease-in,
+    width 0.1s ease-in;
+    
+    .icon-menu__line.top,
+    .icon-menu__line.middle,
+    .icon-menu__line.bottom {
+        transition: transform 0.1s ease-in,
+                    width 0.1s ease-in;
+    }
+
+    .icon-menu__line {
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%)
+    }
+    
+    .icon-menu__line.top {
+        width: var(--su-24);
+        transform-origin: center;
+        transform: rotate(45deg);
+        transition: transform 0.1s ease-in,
+        width 0.1s ease-in;
+    }
+    
+    .icon-menu__line.middle {
+        transform: scale(0);
+        transition: transform 0.1s ease-in;
+    }
+    
+    .icon-menu__line.bottom {
+        width: var(--su-24);
+        transform-origin: center;
+        transform: rotate(-45deg);
+        transition: transform 0.1s ease-in,
+                    width 0.1s ease-in;
+    }
+}
+
+.nav {
+    display: none;
+}
+
+.open-nav {
+    display: block;
+}

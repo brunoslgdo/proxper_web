@@ -1,0 +1,43 @@
+include ../config/conf_cards
+
+mixin cards(arrCards)
+    - let arr = arrCards
+    ul.wrap-card
+        each item in arrCards
+            li.card
+                div(class=`${arr == CARDS_PRODUCT ? "card__thumbnail" : "card__thumbnail thumbnail--small"}`)
+                    if arr == CARDS_PRODUCT
+                        img(src=`${pathImg}${item.productThumbnail}`, class="card__hero", alt="")
+                if arr !== CARDS_PRODUCT
+                    .card__photo
+                        img(src=`${pathImg}${item.teamPhoto}`, class="card__img", alt="")
+                .card__content
+                    .card__description
+                        h2.card__title !{`${arr == CARDS_PRODUCT ? item.productName : item.teamName}`}
+                        p.card__text !{`${arr == CARDS_PRODUCT ? item.productDescription : item.teamTitle}`}
+                    .card__cta
+                        if arr == CARDS_PRODUCT
+                            a(href=`${item.productCtaUrl}`, class="card__link") Leer más
+                        if arr !== CARDS_PRODUCT
+                            a(href="mailto:xmendoza@proxper.com.mx", class="card__link"): img(src=`${pathImg}icon-mail.svg`, alt="")
+                            a(href="tel:5569046638", class="card__link"): img(src=`${pathImg}icon-call.svg`, alt="")
+
+mixin cards_hdiw(arrCards)
+    - let arr = arrCards
+    ul.card
+        each item in arrCards
+            li.card__item
+                .card__thumbnail
+                if arr == CARDS_PRODUCT
+                    .card__icon
+                        img(src=`${pathImg}icon-product.svg`, alt="")
+                else if arr == CARDS_MANAGEMENT_TEAM || CARDS_CONSULTANT_TEAM
+                    .card__photo
+                        img(src=`${pathImg}${item.teamPhoto}`, alt="")
+                .card__content
+                    .card__description
+                        h2.h4.sbold.text-dark !{`${arr == CARDS_PRODUCT ? item.productName : item.teamName}`}
+                        p.text__body.text-light !{`${arr == CARDS_PRODUCT ? item.productDescription : item.teamTitle}`}
+                    if arr == CARDS_PRODUCT
+                        .card__cta.first-light
+                            a(href=`${item.productCtaUrl}`, class="h5") Leer mas
