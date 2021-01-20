@@ -1,4 +1,5 @@
-include ../config/conf_variables
+block head_config
+    include ../config/conf_variables
 include ../mixins/jumbotron
 include ../mixins/cards
 include ../mixins/section_content
@@ -10,9 +11,9 @@ html(lang="es")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Proxper | Seguridad financiera
+        title= `${pageTitle} | ${siteName}`
         //- favicon
-        link(rel="icon", href="favicon.svg", sizes="any", type="image/svg+xml")
+        link(rel="icon", href="img/favicon.svg", sizes="any", type="image/svg+xml")
         //- google fonts
         link(rel="preconnect", href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap", rel="stylesheet")
