@@ -21,6 +21,7 @@
     border-radius: var(--su-8);
     text-align: center;
     overflow: hidden;
+    max-width: toRem(272px);
 
     &__thumbnail {
         background-color: var(--second-dark);
@@ -135,5 +136,19 @@
     &__icon {
         position: absolute;
         right: 0;
+    }
+}
+
+.directivos,
+.gerentes {
+
+    .wrap-card {
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: toRem(576px);
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 }

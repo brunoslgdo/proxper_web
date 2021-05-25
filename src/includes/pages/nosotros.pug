@@ -20,12 +20,12 @@ block main
                 false
             )
         .subcontainer.subcontainer--w880.out-team
-            .our-team__child
+            .our-team__child.directivos
                 +section_subtitle('Directivos')
                 +cards(CARDS_DIRECTOR_TEAM)
-            .our-team__child
+            .our-team__child.gerentes
                 +section_subtitle('Gerentes')
                 +cards(CARDS_MANAGEMENT_TEAM)
-            .our-team__child
+            .our-team__child.equipo
                 +section_subtitle('Equipo de asesores')
                 +cards(CARDS_CONSULTANT_TEAM.sort((topConsultant, bottomConsultant) => topConsultant.rank - bottomConsultant.rank))
