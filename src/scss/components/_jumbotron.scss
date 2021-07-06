@@ -74,7 +74,7 @@
     }
 
     &--bg-home {
-        background-image: url('../img/hero-image-home.jpg');
+        background-image: url('../img/aniversario.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -99,6 +99,38 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+    }
+
+    &__fecha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: var(--su-8);
+        margin-bottom: var(--su-16);
+        font-size: toRem(40px);
+        font-weight: var(--sbold);
+        
+        img {
+            width: toRem(96px);
+            margin-right: var(--su-8);
+            margin-left: var(--su-8);
+        }
+    }
+    
+    &__body {
+        font-size: toRem(24px);
+        font-weight: var(--sbold);
+        margin-bottom: var(--su-16);
+        line-height: 1.333;
+
+        strong {
+            color: var(--second);
+        }
+    }
+
+    &__globos {
+        position: fixed;
+        top: var(--su-32);
     }
 }
 

@@ -1,8 +1,8 @@
 mixin jumbotron_home(imgHero, textTitle, textCaption)
     section.jumbotron.jumbotron--h560.jumbotron--bg-home.polygon--shape-v
         .jumbotron__heading.jumbotron--text-center
-            h2.jumbotron__title= textTitle
-            h3.jumbotron__caption= textCaption
+            h2.jumbotron__title !{`${textTitle}`}
+            h3.jumbotron__caption !{`${textCaption}`}
 
 mixin jumbotron_pages(imgHero, textTitle)
     - let img = imgHero 
@@ -49,3 +49,12 @@ mixin jumbotron_footer(imgHero, textTitle)
         .jumbotron__heading.jumbotron--text-center
             h2.jumbotron__title= textTitle
             h3.jumbotron__caption= textCaption
+
+mixin jumbotron_aniversario(imgHero)
+    section.jumbotron.jumbotron--h560.jumbotron--bg-home.polygon--shape-v
+        //- img(src=`${pathImg}globos.png`, class="jumbotron__globos", alt="proxper globos tercer aniversario")
+        .jumbotron__heading.jumbotron--text-center
+            h2.jumbotron__title ¡Feliz Aniversario!
+            p.jumbotron__fecha Hace <img src="img/tres.png" alt="proxper tercer eniversario"> años
+            p.jumbotron__body comenzamos el camino de transformar vidas
+            p.jumbotron__body Hoy, celebramos más de <strong>831 vidas mejoradas</strong><br>Gracias y vamos por más.
