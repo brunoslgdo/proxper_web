@@ -152,3 +152,43 @@
         }
     }
 }
+
+// new
+.card-team {
+    background-color: teal;
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: var(--su-32);
+
+    &__item {
+        text-align: center;
+        width: toRem(206px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__photo {
+
+        img {
+            border-radius: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            width: toRem(160px);
+        }
+    }
+
+    &__img {
+
+    }
+
+    &__data {
+
+    }
+
+    &__name {
+
+    }
+}

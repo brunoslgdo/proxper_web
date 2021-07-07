@@ -19,13 +19,19 @@ block main
                 false,
                 false
             )
-        .subcontainer.subcontainer--w880.out-team
-            .our-team__child.directivos
-                +section_subtitle('Directivos')
-                +cards(CARDS_DIRECTOR_TEAM)
-            .our-team__child.gerentes
-                +section_subtitle('Gerentes')
-                +cards(CARDS_MANAGEMENT_TEAM)
-            .our-team__child.equipo
-                +section_subtitle('Equipo de asesores')
-                +cards(CARDS_CONSULTANT_TEAM.sort((topConsultant, bottomConsultant) => topConsultant.rank - bottomConsultant.rank))
+
+    section.section
+        article.section__container.section__container--md
+            ul#directores.directores.card-team
+    
+    section.section
+        article.section__container.section__container--md
+            ul#gerentes.gerentes.card-team
+    
+    section.section
+        article.section__container.section__container--md
+            ul#asesores.asesores.card-team
+
+
+append scripts
+    script(src=`${pathJs}team.js`) 

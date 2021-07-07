@@ -38,5 +38,6 @@ html(lang="es")
 
         include ../components/footer
 
-        //- scripts
-        script(src=`${pathJs}menu.js`)
+        block scripts
+            script(src=`${pathJs}variables.js`)
+            script(src=`${pathJs}menu.js`)

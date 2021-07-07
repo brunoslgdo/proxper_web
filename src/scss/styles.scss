@@ -1,5 +1,8 @@
+// libs
+    @use 'sass:math';
+
 // functions
-    @import 'functions/to_rem';
+    @import 'functions/toRem';
 
 // theme
     @import 'theme/colors';
