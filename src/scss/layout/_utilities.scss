@@ -1,0 +1,25 @@
+.text {
+
+    &-center {
+        text-align: center;
+    }
+}
+
+.divider {
+    @extend .wrap;
+    @extend .wrap--md;
+    background-color: var(--first-light);
+    border-style: none;
+    height: toRem(1px);
+    margin-top: var(--su-80);
+    margin-bottom: var(--su-80);
+}
+
+// section team
+
+.team {
+
+    h2 {
+        margin-bottom: var(--su-64);
+    }
+}

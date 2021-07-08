@@ -1,0 +1,22 @@
+:root {
+
+    @each $key, $val in $colors {
+        --#{$key}: #{$val};
+    }
+
+    @each $key, $val in $font-size {
+        --#{$key}: #{$val};
+    }
+    
+    @each $key, $val in $font-weight {
+        --#{$key}: #{$val};
+    }
+
+    @each $key, $val in $spacing-units {
+        --#{$key}: #{$val};
+    }
+    
+    @each $key, $val in $wrap-max-width {
+        --#{$key}: #{$val};
+    }
+}
