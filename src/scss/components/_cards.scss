@@ -139,29 +139,26 @@
     }
 }
 
-.directivos,
-.gerentes {
-
-    .wrap-card {
-
-        @media only screen and (min-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: toRem(576px);
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
-}
-
-// new
 .card-team {
-    background-color: teal;
-    // display: flex;
-    // flex-wrap: wrap;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1;
     grid-template-rows: auto;
-    gap: var(--su-32);
+    row-gap: var(--su-32);
+    column-gap: var(--su-32);
+    
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: var(--su-64);
+    }
+    
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
 
     &__item {
         text-align: center;
@@ -171,24 +168,56 @@
     }
 
     &__photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--second-dark);
+        border-radius: 100%;
+        margin-right: inherit;
+        margin-bottom: var(--su-16);
+        margin-left: inherit;
+        position: relative;
+        height: toRem(160px);
+        width: toRem(160px);
+
+        &::before {
+            content: '';
+            background-color: var(--second);
+            border-radius: inherit;
+            height: toRem(156px);
+            width: toRem(156px);
+            position: absolute;
+            z-index: 1;
+        }
 
         img {
-            border-radius: 100%;
+            border-radius: inherit;
             margin-right: auto;
             margin-left: auto;
-            width: toRem(160px);
+            position: inherit;
+            z-index: 10;
         }
     }
 
-    &__img {
-
-    }
-
-    &__data {
-
-    }
-
     &__name {
+        margin-bottom: toRem(4px);
+    }
+}
 
+.directores.card-team {
+
+    @media only screen and (min-width: 1024px) {
+        grid-template-areas: '. first second .';
+        
+        .card-team__item {
+
+            &:first-child {
+                grid-area: first;
+            }
+            
+            &:last-child {
+                grid-area: second;
+            }
+        }
     }
 }
