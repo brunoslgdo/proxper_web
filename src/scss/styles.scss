@@ -1,17 +1,17 @@
 // libs
     @use 'sass:math';
 
-// functions
+// functions and maps
     @import 'functions/toRem';
-
-// theme
+    @import 'layout/spacing_units';
     @import 'theme/colors';
     @import 'theme/typography';
 
 // layout
+    @import 'layout/custom_properties';
     @import 'layout/reset';
-    @import 'layout/spacing_units';
     @import 'layout/box_model';
+    @import 'layout/utilities';
     
 // components
     @import 'components/header';
@@ -32,5 +32,4 @@
     @import 'sections/products';
     @import 'sections/who_we_are';
     @import 'sections/meet_our_team';
-
     @import 'components/confetti';

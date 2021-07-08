@@ -12,9 +12,8 @@ $spacing-units: (
     su-8: toRem(8px)
 );
 
-:root {
-
-    @each $key, $val in $spacing-units {
-        --#{$key}: #{$val};
-    }
-}
+$wrap-max-width: (
+    wrap-lg: toRem(1280px),
+    wrap-md: toRem(1024px),
+    wrap-sm: toRem(880px)
+);
