@@ -10,21 +10,3 @@ $colors: (
     text-light: #83758C,
     text-alt: #FFFFFF
 );
-
-:root {
-
-    @each $key, $val in $colors {
-        --#{$key}: #{$val};
-    }
-}
-
-@each $key, $val in $colors {
-    
-    .#{$key} {
-        color: #{$val};
-    }
-    
-    .bg--#{$key} {
-        background-color: #{$val};
-    }
-}

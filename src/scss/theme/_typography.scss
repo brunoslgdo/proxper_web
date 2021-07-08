@@ -1,11 +1,11 @@
 $font-size: (
-    display: toRem(48.83px),
-    heading: toRem(39.06px),
-    title: toRem(31.25px),
-    subtitle: toRem(25px),
-    caption: toRem(20px),
-    body: toRem(16px),
-    small: toRem(12.8px)
+    display: toRem(53.41px),
+    heading: toRem(34.18px),
+    title: toRem(27.34px),
+    subtitle: toRem(21.88px),
+    caption: toRem(17.50px),
+    body: toRem(14px),
+    small: toRem(11.20px)
 );
 
 $font-weight: (
@@ -14,77 +14,3 @@ $font-weight: (
     regular: 400,
     light: 300 
 );
-
-:root {
-
-    @each $key, $val in $font-size {
-        --#{$key}: #{$val};
-    }
-    
-    @each $key, $val in $font-weight {
-        --#{$key}: #{$val};
-    }
-}
-
-.weight {
-
-    @each $key, $val in $font-weight {
-        &--#{$key} {
-            font-weight: #{$val};
-        }
-    }
-}
-
-.line-height {
-    &--130 { line-height: 130%; }
-    &--175 { line-height: 175%; }
-}
-
-.head {
-    
-    &__display {
-        font-size: var(--display);
-    }
-    
-    &__title {
-        font-size: var(--heading);
-    }
-}
-
-.subhead {
-    
-    &__display {
-        font-size: var(--title);
-    }
-    
-    &__title {
-        font-size: var(--subtitle);
-    }
-    
-    &__subtitle {
-        font-size: var(--caption);
-    }
-}
-
-.text {
-    
-    &__body {
-        font-size: var(--body);
-    }
-    
-    &__small {
-        font-size: var(--small);
-    }
-
-    &--left {
-        text-align: left;
-    }
-    
-    &--center {
-        text-align: center;
-    }
-    
-    &--left {
-        text-align: right;
-    }
-}
