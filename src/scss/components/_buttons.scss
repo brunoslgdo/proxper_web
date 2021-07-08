@@ -1,8 +1,8 @@
 .button {
     display: inline-block;
     background-color: var(--second);
-    border: toRem(2px) solid var(--second);
-    border-radius: var(--su-32);
+    border: toRem(1px) solid var(--second);
+    border-radius: toRem(4px);
     color: var(--text-alt);
     font-size: var(--small);
     font-weight: var(--bold);
