@@ -1,10 +1,20 @@
-const showMenu = (iconMenuId, navId) => {
-    const iconMenu = document.getElementById(iconMenuId)
-    const nav = document.getElementById(navId)
-    iconMenu.addEventListener('click', () => {
-        nav.classList.toggle('open-nav');
-        iconMenu.classList.toggle('icon-close')
-    })
-}
+/**
+ * header.header
+ *   nav.header__nav
+ *     .header__home
+ *       img.header__logo
+ *     .header__menu
+ *       ul.menu
+ *     .header__buttons
+ *       a.button
+ *       a.button
+ */
 
-showMenu('icon-menu', 'nav')
+const header = document.getElementById('header')
+
+const headerNav = document.createElement('nav')
+const headerHome = document.createElement('div')
+const headerMenu = document.createElement('div')
+const headerButtons = document.createElement('div')
+const headerLogo = document.createElement('img')
+const menu = document.createElement('ul')

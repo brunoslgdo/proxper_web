@@ -13,129 +13,53 @@
     }
 }
 
-.card {
+.card-product {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    box-shadow: 0 0 var(--su-16) 0 hsla(0, 0, 0, .1);
-    border-radius: var(--su-8);
+    grid-template-columns: 1;
+    grid-template-rows: auto;
+    row-gap: var(--su-40);
+    column-gap: var(--su-32);
     text-align: center;
-    overflow: hidden;
-    max-width: toRem(272px);
 
-    &__thumbnail {
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    &__item {
+        box-shadow: 0 0 var(--su-16) 0 hsla(0, 0, 0, .1);
+        border-radius: toRem(4px);
+        width: toRem(240px);
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+    }
+
+    &__poster {
         background-color: var(--second-dark);
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         position: relative;
-        width: 100%;
-        height: toRem(200px);
+        height: toRem(160px);
         z-index: -1;
         overflow: hidden;
     
-        &.thumbnail--small {
-            height: toRem(154px);
-        }
-    }
-
-        &__hero {
+        img {
             object-fit: cover;
             position: absolute;
             width: 100%;
             height: 100%;
         }
-
-        &__photo {
-            margin-top: toRem(-120px);
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-            &__img {
-                border: toRem(2px) solid var(--second);
-                border-radius: 50%;
-                width: toRem(180px);
-                height: toRem(180px);
-                transition: transform 0.3s ease-in;
-                
-                &:hover {
-                    transform: scale(1.01);
-                    transition: transform 0.1s ease-in;
-                }
-            }
-     
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: var(--body);
-        font-weight: var(--light); 
-        padding: var(--su-32);
-    }
-    
-        &__description {
-            margin-bottom: var(--su-32);
-        }
-  
-            &__title {
-                @extend .subhead__subtitle;
-                @extend .weight--bold;
-                color: var(--text);
-                margin-bottom: var(--su-16);
-            }
-            
-            &__text {
-                @extend .text__body;
-                @extend .weight--light;
-                color: var(--text-light);
-            }
-
-
-        &__cta {}
-
-            &__link {
-                display: inline-block;
-                margin-right: var(--su-8);
-                margin-left: var(--su-8);
-            }
-
-        &__link {
-            color: var(--first-light);
-            font-weight: var(--regular);
-        }
-}
-
-.bullets {
-    margin-bottom: var(--su-80);
-}
-
-.card-product {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: var(--su-32);
-    margin-right: auto;
-    margin-left: auto;
-    max-width: toRem(880px);
-    
-    @media only screen and (min-width: 568px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    @media only screen and (min-width: 812px) {
-        grid-template-columns: repeat(3, 1fr);
     }
 
-    &__item {
-        background-color: var(--second-dark);
-        border-radius: var(--su-32) var(--su-32) var(--su-80);
-        padding: var(--su-32)  var(--su-32) calc(var(--su-32) * 2) var(--su-32);
-        position: relative;
-        margin-bottom: auto;
+    &__description {
+        padding: var(--su-32) var(--su-24);
     }
 
-    &__icon {
-        position: absolute;
-        right: 0;
+    h3 {
+        margin-top: 0;
     }
 }
 
@@ -200,11 +124,12 @@
     }
 
     &__name {
+        font-size: var(--caption);
         margin-bottom: toRem(4px);
     }
 }
 
-.directores.card-team {
+.directores {
 
     @media only screen and (min-width: 1024px) {
         grid-template-areas: '. first second .';

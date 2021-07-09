@@ -223,7 +223,7 @@ const team = (arrTeam, cardTeamId) => {
         cardTeamImg.setAttribute('class', 'card-team__img')
         cardTeamData.setAttribute('class', 'card-team__data')
         cardTeamName.setAttribute('class', 'card-team__name')
-        cardTeamButton.setAttribute('class', 'button')
+        cardTeamButton.setAttribute('class', 'button button--ghost-alt')
 
         // asignamos atributo alt para el elemento img
         cardTeamImg.setAttribute('src', `${pathImg}${item.img}`)

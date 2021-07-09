@@ -9,15 +9,9 @@ block main
             'aniversario.png'
         )
     
-    <!-- products -->
-    section.container.container--p128#productos
-        .subcontainer.subcontainer--w880
-            +section_heading_center(
-                'Nuestros productos',
-                'Entendiendo tus necesidades'
-            )
-        .subcontainer.subcontainer--w880
-            +cards(CARDS_PRODUCT)
+    //- prodcuts
+    section.section: article.wrap.wrap--sm
+        ul#card-product.card-product
     
     <!-- who we are -->
     section.container.container--p128.who-we-are
@@ -42,4 +36,6 @@ block main
             'Expertos en Seguridad Financiera'
         )
 
-    script(src=`${pathJs}confetti.js`) 
+    append scripts
+        script(src=`${pathJs}confetti.js`) 
+        script(src=`${pathJs}products.js`) 

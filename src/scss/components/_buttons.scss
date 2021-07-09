@@ -4,12 +4,14 @@
     border: toRem(1px) solid var(--second);
     border-radius: toRem(4px);
     color: var(--text-alt);
-    font-size: var(--small);
-    font-weight: var(--bold);
-    line-height: 100%;
-    padding: toRem(12px) var(--su-32);
+    padding: var(--su-8) var(--su-32);
 
     &--ghost {
+        background-color: initial;
+    }
+    
+    &--ghost-alt {
+        color: var(--second);
         background-color: initial;
     }
 }
