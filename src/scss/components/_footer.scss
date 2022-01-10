@@ -115,3 +115,31 @@
         color: var(--text-alt);
     }
 }
+
+// divider
+.divider {
+    border: 0; 
+    background-color: rgba($color: #ffffff, $alpha: .3);
+    height: toRem(1px);
+    margin-top: var(--su-32);
+    margin-bottom: var(--su-32);
+}
+
+// desarrollado por
+.desarrollado-por {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: var(--su-32);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    h5 {
+        margin-left: var(--su-16);
+        font-weight: var(--regular);
+    }
+}

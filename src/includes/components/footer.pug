@@ -29,4 +29,13 @@ footer.footer
                 li.contact__item: a(href=`tel:+52${CONTACT.tel.one}`, class="contact__link") !{`${CONTACT.tel.one}`}
                 li.contact__item
                     a(href=`tel:+52${CONTACT.tel.two}`, class="contact__link") !{`${CONTACT.tel.two}`} 
-                    //- span.address ext. !{`${CONTACT.tel.twoExt}`}
+    
+    //- divider
+    hr.divider
+
+    section.footer__wrap
+        .footer__child
+            .desarrollado-por
+                img(src="img/tolko-logo.svg", alt="Tolko Comunicación Logo")
+                h5.small.text-alt Sitio desarrollado por <a href="http://tolkogroup.com/" rel="noopener" target="_blank" class="small text-alt">Tolko Comunicación</a>
+        
