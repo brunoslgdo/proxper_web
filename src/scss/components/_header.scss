@@ -95,10 +95,7 @@
         
         @media only screen and (min-width: 1024px) {
             margin-bottom: 0;
-            
-            &:first-child {
-                margin-right: var(--su-40);
-            }
+            margin-right: var(--su-40);
         }
     }
 
