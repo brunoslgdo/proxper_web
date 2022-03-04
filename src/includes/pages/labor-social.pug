@@ -1,0 +1,38 @@
+extend ../templates/main
+append head_config
+    - pageTitle = 'Labor Social'
+block main
+
+    -
+        const IMGS_CASA_DE_LA_AMISTAD = [
+           '',
+           '',
+           '',
+           '',
+           '',
+           '',
+           '',
+           '',
+        ]
+
+    +jumbotron_pages(
+        'our-team',
+        'Labor social'
+    )
+    
+    section.container
+        .subcontainer
+            ul.bullet-menu
+                li.bullet-menu__item 
+                    a(href="#", class="bullet-menu__link", rel="noopener") Casa de la amistad
+                    span.bullet-menu__bullet
+                li.bullet-menu__item 
+                    a(href="#", class="bullet-menu__link", rel="noopener") Teletón
+                    span.bullet-menu__bullet
+        .subcontainer
+            h2 Casa de la amistad
+            video(src="", controls)
+            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minima enim, id voluptatibus labore odit animi perspiciatis iste suscipit quasi aperiam libero fugit doloribus accusamus incidunt quibusdam nulla impedit accusantium?
+            ul
+                each item in IMGS_CASA_DE_LA_AMISTAD
+                    li: img(src=`${pathImg}${item}`, alt="Proxper, labor social en Casa de la Amistad")
