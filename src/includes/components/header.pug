@@ -11,7 +11,12 @@ header.header
     #nav.header__wrap.nav
         ul.menu.menu__left
             each item in NAVBAR_LEFT
-                li.menu__item: a(href=`${item.url}`, class="menu__link") !{`${item.content.toUpperCase()}`}
+                li.menu__item
+                    a(href=`${item.itemUrl}`, class="menu__link") !{`${item.item.toUpperCase()}`}
+                    each subItem in item.itemChild 
+                        ul.submenu
+                            li.menu__item.submenu__subitem
+                                a(href=`${subItem.itemUrl}`, class="menu__link submenu__link") !{`${subItem.item.toUpperCase()}`}
         ul.menu.menu__right
             each item, key in NAVBAR_RIGHT
                 if key / 2 === 0
